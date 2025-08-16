@@ -1,0 +1,10 @@
+{
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "rbbit.typescript-hero",
+    "eamodio.gitlens",
+    "vscode-icons-team.vscode-icons",
+    "usernamehw.errorlens"
+  ]
+}
