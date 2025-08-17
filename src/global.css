@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+@theme {
+  --color-teal: #257180;
+  --color-beige: #f2e5bf;
+  --color-orange: #fd8b51;
+  --color-vintage: #cb6040;
+
+  --color-primary: var(--color-teal);
+  --color-secondary: var(--color-orange);
+  --color-accent: var(--color-vintage);
+  --color-background: var(--color-beige);
+
+  --font-sans: "Noto Sans Japanese";
+}

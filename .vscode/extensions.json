@@ -5,6 +5,7 @@
     "rbbit.typescript-hero",
     "eamodio.gitlens",
     "vscode-icons-team.vscode-icons",
-    "usernamehw.errorlens"
+    "usernamehw.errorlens",
+    "bradlc.vscode-tailwindcss"
   ]
 }

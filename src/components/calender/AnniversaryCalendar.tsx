@@ -1,5 +1,6 @@
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
+import styles from "./index.module.css";
 
 type AnniversaryCalendarProps = {
   selectedDate: Date | null;
@@ -11,8 +12,12 @@ const AnniversaryCalendar = ({
   onDateClick,
 }: AnniversaryCalendarProps) => {
   return (
-    <div className="max-w-lg mx-auto">
-      <Calendar onClickDay={onDateClick} value={selectedDate ?? new Date()} />
+    <div className={styles.calendarWrapper}>
+      <Calendar
+        onClickDay={onDateClick}
+        value={selectedDate ?? new Date()}
+        className={styles.reactCalendar}
+      />
     </div>
   );
 };

@@ -1,4 +1,4 @@
-import AnniversaryCalendar from "@/components/AnniversaryCalendar";
+import AnniversaryCalendar from "@/components/calender/AnniversaryCalendar";
 import { Card } from "@/components/ui/Card";
 import { Dialog } from "@/components/ui/Dialog";
 import { useState } from "react";
