@@ -1,5 +1,5 @@
-import Calendar from "react-calendar";
-import "react-calendar/dist/Calendar.css";
+import dayGridPlugin from "@fullcalendar/daygrid";
+import FullCalendar from "@fullcalendar/react";
 import styles from "./index.module.css";
 
 type AnniversaryCalendarProps = {
@@ -12,11 +12,18 @@ const AnniversaryCalendar = ({
   onDateClick,
 }: AnniversaryCalendarProps) => {
   return (
-    <div className={styles.calendarWrapper}>
-      <Calendar
-        onClickDay={onDateClick}
-        value={selectedDate ?? new Date()}
-        className={styles.reactCalendar}
+    <div className={styles.container}>
+      <FullCalendar
+        plugins={[dayGridPlugin]}
+        initialView="dayGridMonth"
+        viewClassNames={styles.calendar}
+        events={[
+          {
+            title: "テスト記念日",
+            date: "2025-08-25",
+            className: styles.events,
+          },
+        ]}
       />
     </div>
   );

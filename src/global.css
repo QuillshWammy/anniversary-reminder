@@ -12,4 +12,8 @@
   --color-background: var(--color-beige);
 
   --font-sans: "Noto Sans Japanese";
+
+  --font-size-lg: 2rem;
+  --font-size-md: 1rem;
+  --font-size-sm: 0.75rem;
 }
