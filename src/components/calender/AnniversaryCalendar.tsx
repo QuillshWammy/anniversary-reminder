@@ -4,9 +4,9 @@ import FullCalendar from "@fullcalendar/react";
 import styles from "./index.module.css";
 import type { Event } from "./types";
 
-type AnniversaryCalendarProps = {
+type Props = {
   selectedDate?: Date;
-  events?: Event[];
+  events: Event[];
   onDateClick: (date: Date) => void;
   onEventClick: (id: string) => void;
 };
@@ -16,7 +16,7 @@ const AnniversaryCalendar = ({
   events,
   onDateClick,
   onEventClick,
-}: AnniversaryCalendarProps) => {
+}: Props) => {
   return (
     <div className={styles.container}>
       <FullCalendar
@@ -30,7 +30,7 @@ const AnniversaryCalendar = ({
           className: styles.events,
         }))}
         selectable={true}
-        // editable={true}
+        editable={true}
         dateClick={(info) => {
           console.log("dateClick:", info);
           onDateClick(info.date);

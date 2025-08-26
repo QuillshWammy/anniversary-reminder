@@ -18,7 +18,6 @@ const prevDay = addDays(today, -2);
 export const Default: Story = {
   args: {
     selectedDate: nextDay,
-    onDateClick: (date: Date) => alert(date.toLocaleDateString()),
     events: [
       { id: "1", title: "Next Day", date: nextDay },
       { id: "2", title: "Two Days Ago", date: prevDay },
