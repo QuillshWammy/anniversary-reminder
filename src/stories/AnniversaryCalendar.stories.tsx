@@ -1,5 +1,6 @@
 import AnniversaryCalendar from "@/components/calender/AnniversaryCalendar";
 import type { Meta, StoryObj } from "@storybook/react";
+import { addDays } from "date-fns";
 
 const meta: Meta<typeof AnniversaryCalendar> = {
   title: "Components/AnniversaryCalendar",
@@ -10,9 +11,17 @@ export default meta;
 
 type Story = StoryObj<typeof AnniversaryCalendar>;
 
+const today = new Date();
+const nextDay = addDays(today, 1);
+const prevDay = addDays(today, -2);
+
 export const Default: Story = {
   args: {
-    selectedDate: new Date(),
+    selectedDate: nextDay,
     onDateClick: (date: Date) => alert(date.toLocaleDateString()),
+    events: [
+      { id: "1", title: "Next Day", date: nextDay },
+      { id: "2", title: "Two Days Ago", date: prevDay },
+    ],
   },
 };
