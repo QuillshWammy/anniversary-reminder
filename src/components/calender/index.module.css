@@ -1,16 +1,12 @@
+@reference "tailwindcss";
+
 .container {
-  background-color: var(--color-background);
-  padding: 1rem;
+  @apply bg-[var(--color-background)] p-4;
 }
 
 .events {
-  color: white;
-  border-color: var(--color-secondary);
-  background-color: var(--color-secondary);
-  border-radius: 0.25rem;
-  padding: 0.25rem 0.5rem;
-  font-size: 0.75rem;
-  text-align: center;
+  @apply text-white border border-[var(--color-secondary)] bg-[var(--color-secondary)];
+  @apply rounded px-2 py-1 text-xs text-center;
 }
 
 :root {
