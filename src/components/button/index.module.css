@@ -1,0 +1,22 @@
+@reference "tailwindcss";
+
+.button {
+  @apply px-4 py-2 rounded-lg font-medium mx-2 transition-colors;
+  color: white;
+}
+
+.primary {
+  background-color: var(--color-primary);
+}
+
+.secondary {
+  background-color: var(--color-secondary);
+}
+
+.button:hover {
+  filter: brightness(1.1);
+}
+
+.button:active {
+  transform: scale(0.97);
+}

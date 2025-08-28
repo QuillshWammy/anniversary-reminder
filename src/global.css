@@ -6,10 +6,10 @@
   --color-orange: #fd8b51;
   --color-vintage: #cb6040;
 
+  --color-background: var(--color-beige);
   --color-primary: var(--color-teal);
   --color-secondary: var(--color-orange);
   --color-accent: var(--color-vintage);
-  --color-background: var(--color-beige);
 
   --font-sans: "Noto Sans Japanese";
 
