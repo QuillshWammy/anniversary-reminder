@@ -30,7 +30,7 @@ jobs:
           SARIF_ESLINT_IGNORE_SUPPRESSED: "true"
         run: |
           npx eslint . \
-            --config .eslintrc.js \
+            --config eslint.config.js \
             --ext .js,.jsx,.ts,.tsx \
             --no-error-on-unmatched-pattern \
             --format @microsoft/eslint-formatter-sarif \
