@@ -1,8 +1,8 @@
 import React, { useRef } from "react";
 import { useDialog, useModal, useOverlay, usePreventScroll } from "react-aria";
+import styles from "./index.module.css";
 import { Button } from "../button/Button";
 import { Typography } from "../typography/Typography";
-import styles from "./index.module.css";
 
 type DialogProps = {
   title: string;

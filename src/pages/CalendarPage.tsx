@@ -1,5 +1,5 @@
-import type { Event } from "@/components/calender/types";
 import { useState } from "react";
+import type { Event } from "@/components/calender/types";
 import AnniversaryCalendarView from "./view/AnniversaryCalenderView";
 
 const initialEvents: Event[] = [

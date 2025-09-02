@@ -1,6 +1,6 @@
 import "@/global.css";
-import CalendarPage from "@/pages/CalendarPage";
 import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
+import CalendarPage from "@/pages/CalendarPage";
 
 function App() {
   return (

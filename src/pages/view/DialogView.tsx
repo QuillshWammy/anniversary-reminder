@@ -1,8 +1,8 @@
-import { Button } from "@/components/button/Button";
-import { Dialog } from "@/components/dialog/Dialog";
 import React from "react";
 import { OverlayContainer } from "react-aria";
 import { useOverlayTriggerState } from "react-stately";
+import { Button } from "@/components/button/Button";
+import { Dialog } from "@/components/dialog/Dialog";
 
 export const DialogExample: React.FC = () => {
   const state = useOverlayTriggerState({});

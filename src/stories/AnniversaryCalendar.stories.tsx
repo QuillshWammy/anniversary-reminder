@@ -1,6 +1,6 @@
+import { addDays } from "date-fns";
 import AnniversaryCalendar from "@/components/calender/AnniversaryCalendar";
 import type { Meta, StoryObj } from "@storybook/react";
-import { addDays } from "date-fns";
 
 const meta: Meta<typeof AnniversaryCalendar> = {
   title: "Components/AnniversaryCalendar",
