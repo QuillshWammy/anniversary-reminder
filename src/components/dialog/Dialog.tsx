@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import { useDialog, useModal, useOverlay, usePreventScroll } from "react-aria";
 import { Button } from "../button/Button";
+import { Typography } from "../typography/Typography";
 import styles from "./index.module.css";
 
 type DialogProps = {
@@ -38,12 +39,14 @@ export const Dialog: React.FC<DialogProps> = ({
         ref={ref}
         className={styles.container}
       >
-        <h1 {...titleProps} className={styles.title}>
+        <Typography as="h1" size="lg" {...titleProps}>
           {title}
-        </h1>
+        </Typography>
         <div className={styles.content}>
-          <p>{date}</p>
-          <p>{text}</p>
+          <Typography>
+            {`${date}
+            ${text}`}
+          </Typography>
         </div>
         <DialogButtons onClose={onClose} onConfirm={onConfirm} />
       </div>
