@@ -17,5 +17,5 @@
 }
 
 .button:active {
-  @apply scale-97;
+  @apply scale-[0.97];
 }
