@@ -1,0 +1,13 @@
+@reference "tailwindcss";
+
+.inputWrapper {
+  @apply flex flex-col gap-2;
+}
+
+.label {
+  @apply text-sm text-[var(--color-primary)];
+}
+
+.input {
+  @apply px-3 py-2 border border-[var(--color-primary)] rounded-md text-base;
+}
