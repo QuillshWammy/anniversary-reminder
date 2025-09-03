@@ -25,7 +25,7 @@ const DialogWrapper = () => {
           <Dialog
             title="予定の確認"
             date="2025-08-28"
-            text="Storybook から開いたダイアログです。"
+            contents="Storybook から開いたダイアログです。"
             onClose={state.close}
             onConfirm={() => {
               alert("確定しました！");

@@ -1,13 +1,14 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { useDialog, useModal, useOverlay, usePreventScroll } from "react-aria";
 import styles from "./index.module.css";
 import { Button } from "../button/Button";
+import { TextInput } from "../input/textInput/TextInput";
 import { Typography } from "../typography/Typography";
 
 type DialogProps = {
   title: string;
   date: string;
-  text: string;
+  contents: string;
   onClose: () => void;
   onConfirm: () => void;
 };
@@ -15,7 +16,7 @@ type DialogProps = {
 export const Dialog: React.FC<DialogProps> = ({
   title,
   date,
-  text,
+  contents,
   onClose,
   onConfirm,
 }) => {
@@ -29,6 +30,7 @@ export const Dialog: React.FC<DialogProps> = ({
   usePreventScroll();
   const { modalProps } = useModal();
   const { dialogProps, titleProps } = useDialog({}, ref);
+  const [inputText, setInputText] = useState("");
 
   return (
     <div className={styles.overlay}>
@@ -45,9 +47,15 @@ export const Dialog: React.FC<DialogProps> = ({
         <div className={styles.content}>
           <Typography>
             {`${date}
-            ${text}`}
+            ${contents}`}
           </Typography>
         </div>
+        <TextInput
+          label="イベント詳細"
+          value={inputText}
+          onChange={setInputText}
+          placeholder="入力してください..."
+        />
         <DialogButtons onClose={onClose} onConfirm={onConfirm} />
       </div>
     </div>
