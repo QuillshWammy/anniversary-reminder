@@ -11,17 +11,16 @@ Currently, two official plugins are available:
 
 ## Eslint Test
 
-To run ESLint checks locally during development, use the following command:
+- To run ESLint checks locally during development, use the following command:
 
 ```
 npx eslint . --ext .ts,.tsx --max-warnings=0
 ```
 
-/\*\*
-
 - If you want to run eslint when saving a file, please add the following setting to your vscode settings.json:
--
-- "editor.codeActionsOnSave": {
-- "source.fixAll.eslint": "always"
-- }
-  \*/
+
+```
+"editor.codeActionsOnSave": {
+"source.fixAll.eslint": "always"
+}
+```
