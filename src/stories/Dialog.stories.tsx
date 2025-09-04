@@ -1,8 +1,8 @@
+import type { Meta, StoryObj } from "@storybook/react";
 import { OverlayContainer } from "react-aria";
 import { useOverlayTriggerState } from "react-stately";
 import { Button } from "@/components/button/Button";
 import { Dialog } from "@/components/dialog/Dialog";
-import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Dialog> = {
   title: "Components/Dialog",
