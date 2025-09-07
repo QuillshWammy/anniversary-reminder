@@ -36,38 +36,25 @@ export default tseslint.config([
       "@typescript-eslint/no-explicit-any": "off",
       "@typescript-eslint/explicit-module-boundary-types": "off",
       "sort-imports": ["warn", { ignoreDeclarationSort: true }],
-      "import/order": [
-        "warn",
-        {
-          groups: [
-            "builtin",
-            "external",
-            "internal",
-            "unknown",
-            ["parent", "sibling", "index"],
-            "object",
-            "type",
-          ],
-          pathGroups: [
-            {
-              pattern: "@/**",
-              group: "internal",
-              position: "after",
-            },
-            {
-              pattern: "*.css",
-              group: "unknown",
-              position: "before",
-            },
-          ],
-          pathGroupsExcludedImportTypes: ["builtin"],
-          "newlines-between": "never",
-          alphabetize: {
-            order: "asc",
-            caseInsensitive: true,
-          },
-        },
-      ],
     },
+    "import/order": [
+      "warn",
+      {
+        groups: [
+          "builtin",
+          "external",
+          "internal",
+          ["parent", "sibling", "index"],
+          "type",
+        ],
+        pathGroups: [
+          { pattern: "@/**", group: "internal", position: "after" },
+          { pattern: "*.css", group: "internal", position: "after" },
+        ],
+        pathGroupsExcludedImportTypes: ["builtin"],
+        "newlines-between": "never",
+        alphabetize: { order: "asc", caseInsensitive: true },
+      },
+    ],
   },
 ]);
