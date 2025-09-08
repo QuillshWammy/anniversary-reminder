@@ -1,5 +1,5 @@
-import type { Table } from "dexie";
 import Dexie from "dexie";
+import type { Table } from "dexie";
 
 export type Event = {
   id?: number;
@@ -9,7 +9,6 @@ export type Event = {
   [key: string]: any;
 };
 
-// データベース定義
 export class MyDB extends Dexie {
   events!: Table<Event, number>;
 
