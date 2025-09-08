@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
 import { useDialog, useModal, useOverlay, usePreventScroll } from "react-aria";
+import { db } from "@/db";
 import styles from "./index.module.css";
 import { Button } from "../button/Button";
 import { TextInput } from "../input/textInput/TextInput";
@@ -32,6 +33,17 @@ export const Dialog: React.FC<DialogProps> = ({
   const { dialogProps, titleProps } = useDialog({}, ref);
   const [inputText, setInputText] = useState("");
 
+  const handleConfirm = () => {
+    db.events.add({
+      title,
+      date,
+      description: inputText,
+    }).then(id => {
+      console.log("イベントをDBに追加:", id);
+      onConfirm();
+    });
+  };
+
   return (
     <div className={styles.overlay}>
       <div
@@ -56,7 +68,7 @@ export const Dialog: React.FC<DialogProps> = ({
           onChange={setInputText}
           placeholder="入力してください..."
         />
-        <DialogButtons onClose={onClose} onConfirm={onConfirm} />
+        <DialogButtons onClose={onClose} onConfirm={handleConfirm} />
       </div>
     </div>
   );
