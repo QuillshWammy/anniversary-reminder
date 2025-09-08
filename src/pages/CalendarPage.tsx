@@ -1,6 +1,6 @@
 import { useState } from "react";
 import type { Event } from "@/components/calender/types";
-import AnniversaryCalendarView from "./view/AnniversaryCalenderView";
+import AnniversaryCalendarView from "@/pages/view/AnniversaryCalenderView";
 
 const initialEvents: Event[] = [
   { id: "1", title: "誕生日", date: new Date("2025-09-01") },

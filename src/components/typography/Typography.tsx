@@ -1,5 +1,5 @@
 import React from "react";
-import type { Size, Variant } from "../type";
+import type { Size, Variant } from "@/components/type";
 
 type AsElement = "p" | "span" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
 

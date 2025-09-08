@@ -1,8 +1,8 @@
 import dayGridPlugin from "@fullcalendar/daygrid";
 import interactionPlugin from "@fullcalendar/interaction";
 import FullCalendar from "@fullcalendar/react";
+import type { Event } from "@/components/calender/types";
 import styles from "./index.module.css";
-import type { Event } from "./types";
 
 type Props = {
   selectedDate?: Date;

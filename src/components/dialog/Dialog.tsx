@@ -1,10 +1,10 @@
 import React, { useRef, useState } from "react";
 import { useDialog, useModal, useOverlay, usePreventScroll } from "react-aria";
+import { Button } from "@/components/button/Button";
+import { TextInput } from "@/components/input/textInput/TextInput";
+import { Typography } from "@/components/typography/Typography";
 import { db } from "@/db";
 import styles from "./index.module.css";
-import { Button } from "../button/Button";
-import { TextInput } from "../input/textInput/TextInput";
-import { Typography } from "../typography/Typography";
 
 type DialogProps = {
   title: string;
