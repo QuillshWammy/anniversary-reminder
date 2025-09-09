@@ -1,8 +1,8 @@
 import "@/global.css";
 import { useEffect } from "react";
 import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
-import CalendarPage from "@/pages/CalendarPage";
 import { db } from "./db";
+import CalendarPage from "@/pages/CalendarPage";
 
 function App() {
   // debug

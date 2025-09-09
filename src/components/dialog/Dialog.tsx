@@ -1,9 +1,9 @@
 import React, { useRef, useState } from "react";
 import { useDialog, useModal, useOverlay, usePreventScroll } from "react-aria";
+import { db } from "@/db";
 import { Button } from "@/components/button/Button";
 import { TextInput } from "@/components/input/textInput/TextInput";
 import { Typography } from "@/components/typography/Typography";
-import { db } from "@/db";
 import styles from "./index.module.css";
 
 type DialogProps = {

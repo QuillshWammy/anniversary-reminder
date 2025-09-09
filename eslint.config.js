@@ -47,8 +47,21 @@ export default tseslint.config([
             "type",
           ],
           pathGroups: [
-            { pattern: "@/**", group: "internal", position: "after" },
-            { pattern: "*.css", group: "internal", position: "after" },
+            {
+              pattern: "@/db",
+              group: "internal",
+              position: "before",
+            },
+            {
+              pattern: "@/components/**",
+              group: "internal",
+              position: "after",
+            },
+            {
+              pattern: "*.css",
+              group: "internal",
+              position: "after",
+            },
           ],
           pathGroupsExcludedImportTypes: ["builtin"],
           "newlines-between": "never",
