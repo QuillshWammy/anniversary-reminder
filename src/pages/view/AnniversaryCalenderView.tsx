@@ -1,6 +1,8 @@
 import { useState } from "react";
 import AnniversaryCalendar from "@/components/calender/AnniversaryCalendar";
 import type { Event } from "@/components/calender/types";
+import { Dialog } from "@/components/dialog/Dialog";
+import { Typography } from "@/components/typography/Typography";
 
 type Props = {
   events: Event[];
@@ -8,37 +10,46 @@ type Props = {
 };
 
 const AnniversaryCalendarView = ({ events, setEvents }: Props) => {
-  // TODO: FullCalenderのCustomHooks
   const [selectedDate, setSelectedDate] = useState<Date | undefined>(undefined);
+  const [showDialog, setShowDialog] = useState(false);
 
   const handleDateClick = (date: Date) => {
     setSelectedDate(date);
-    // TODO: イベント追加用ダイアログを表示
-    console.log(date);
-    setEvents([
-      ...events,
-      {
-        id: `${Date.now()}`,
-        title: `New Event (${date.toLocaleDateString()})`,
-        date,
-      },
-    ]);
-    console.log(events);
+    setShowDialog(true);
   };
 
   const handleEventClick = (id: string) => {
     alert(`イベントID: ${id} がクリックされました`);
   };
 
+  const handleDialogClose = () => {
+    setShowDialog(false);
+  };
+
+  const handleDialogConfirm = () => {
+    setShowDialog(false);
+  };
+
   return (
     <div>
-      <h1>Anniversary Calendar</h1>
+      <Typography size="xl" bold>
+        Anniversary Calendar
+      </Typography>
       <AnniversaryCalendar
         selectedDate={selectedDate}
         events={events}
         onDateClick={handleDateClick}
         onEventClick={handleEventClick}
       />
+      {showDialog && selectedDate && (
+        <Dialog
+          title="イベント追加"
+          date={selectedDate.toLocaleDateString()}
+          contents="この日にイベントを追加します"
+          onClose={handleDialogClose}
+          onConfirm={handleDialogConfirm}
+        />
+      )}
     </div>
   );
 };
